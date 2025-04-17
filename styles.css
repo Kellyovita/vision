@@ -256,3 +256,8 @@ body {
 .links {
   position: relative;
 }
+.links a.active {
+  background-color: #66c2c3;
+  color: white;
+  border-radius: 50px;
+}
