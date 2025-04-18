@@ -4,28 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kelly ovita Portfolio</title>
+    <title>Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
     <link rel="preconnect" href="https://fonts.bunny.net">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
 </head>
 
-<body class="bg-gray-900 text-white">
-
-   <header class="bg-gray-800 text-white text-3xl sm:text-4xl font-bold p-3 sticky top-0">Portfolio.</header>
-   <nav class="nav">
-    <ul>
-        <li><a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a></li>
-        <li><a href="index.html"><i class="fa fa-fw fa-info-circle"></i> About</a></li>
-        <li><a href="index.html" class="active"><i class="fa fa-fw fa-briefcase"></i> Portfolio</a></li>
-        <li><a href="index.html"><i class="fa fa-fw fa-pencil"></i> Blog</a></li>
-        <li><a href="index.html"><i class="fa fa-fw fa-envelope"></i> Contact</a></li>
-        <li><a href="index.html"><i class="fa fa-fw fa-user"></i> Login</a></li>
-    </ul>
-    </ul>
-</nav>
+<body>
+    <div class="navbar">
+        <button class="dark-toggle" title="Toggle Dark Mode">
+          <i class="fa fa-moon-o"></i>
+        </button>
+      
+        <div class="logo">
+          <img src="vision.jpg" alt="Vision">
+        </div>
+      
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <i class="fa fa-bars"></i>
+        </button>
+      
+        <div class="links">
+          <ul class="nav-links">
+            <li><a href="index.html" ><i class="fa fa-fw fa-home"></i> Home</a></li>
+            <li><a href="index.html"><i class="fa fa-fw fa-info-circle"></i> About</a></li>
+            <li><a href="portfolio.html" class="active"><i class="fa fa-fw fa-briefcase"></i> Portfolio</a></li>
+            <li><a href="index.html"><i class="fa fa-fw fa-pencil"></i> Blog</a></li>
+            <li><a href="index.html"><i class="fa fa-fw fa-envelope"></i> Contact</a></li>
+            <li><a href="index.html"><i class="fa fa-fw fa-user"></i> Login</a></li>
+          </ul>
+        </div>
+      </div>
     <!-- Main Content -->
     <main class="bg-gray-900 text-white py-8">
         <div class="container mx-auto px-4">
@@ -49,7 +61,7 @@
             </div>
             <div class="flex items-center mt-2 text-sm text-gray-400 space-x-2">
                 <span class="iconify" data-icon="bi:geo-alt-fill" data-inline="false"></span>
-                <span>Kisii Kenya</span>
+                <span>Kisii Kenya(Online tech city)</span>
             
             </div> 
         </div>
@@ -280,7 +292,7 @@
         <p>Copyright © 2025 ovision. All rights reserved.</p>
     </div>
 </footer>
-
+<script src="script.js"></script>
 </body>
 
 </html>
