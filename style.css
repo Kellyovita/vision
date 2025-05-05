@@ -404,60 +404,133 @@ li a:hover {
   font-family: 'Bungee Inline', display;
 }
 /* Add to existing styles.css */
+/* General Styling for the Login Section */
 .login-section {
+  background-color: var(--bg);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 100vh;
   padding: 20px;
-  animation: fadeIn 1s ease-in-out;
 }
 
-.login-form {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
+.section-content {
+  background-color: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   width: 100%;
-  animation: slideUp 1s ease-out;
+  max-width: 400px;
+  animation: fadeIn 1s ease-out; /* Add fade-in animation */
 }
 
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: var(--text);
+}
+
+p {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+/* Form Styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+input[type="email"], input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+input[type="email"]:focus, input[type="password"]:focus {
+  border: 1px solid #f39c12; /* Highlight color */
+  outline: none;
+}
+
+/* Button Styling */
+.btn {
+  background-color: #f39c12;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e67e22;
+}
+
+/* Footer Text */
+.footer-text {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-text a {
+  color: #f39c12;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-text a:hover {
+  text-decoration: underline;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #f39c12;
+  color: white;
+  padding: 12px 14px;
+  border-radius: 50%;
+  font-size: 18px;
+  z-index: 1000;
+  display: none;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.back-to-top:hover {
+  background-color: #d35400;
+  transform: translateY(-3px);
+}
+
+/* Animation for fade-in effect */
 @keyframes fadeIn {
   from {
     opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideUp {
-  from {
     transform: translateY(20px);
-    opacity: 0;
   }
   to {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.login-form input,
-.login-form button {
-  margin-bottom: 15px;
-}
-
-.login-form button {
-  background-color: #ff6b00;
-  color: #fff;
-  font-weight: bold;
-  border-radius: 5px;
-  padding: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.login-form button:hover {
-  background-color: #e65a00;
+/* For Dark Mode */
+.dark-mode {
+  --bg: #111;
+  --text: #f2f2f2;
 }
