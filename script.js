@@ -19,3 +19,9 @@ window.addEventListener("scroll", () => {
     backToTopButton.style.display = "none";
   }
 });
+
+// Login page animation
+const loginForm = document.querySelector('.login-form');
+window.addEventListener('load', () => {
+  loginForm.classList.add('active');
+});
