@@ -445,3 +445,22 @@ body {
   max-width: 400px;
   text-align: center;
 }
+.signup-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+  padding: 40px 20px;
+}
+
+.signup-wrapper {
+  width: 100%;
+  max-width: 500px;
+}
+
+.form-container {
+  background: #fff; /* optional */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
