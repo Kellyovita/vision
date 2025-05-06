@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forgot Password | VISION KreationS</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
+<body>
+  <!-- Navbar (reuse same as in other pages) -->
+  <div class="navbar">
+    <button class="dark-toggle" title="Toggle Dark Mode">
+      <i class="fa fa-moon-o"></i>
+    </button>
+
+    <div class="logo">
+      <img src="vision.jpg" alt="Vision">
+    </div>
+
+    <button class="menu-toggle" aria-label="Toggle navigation">
+      <i class="fa fa-bars"></i>
+    </button>
+
+    <div class="links">
+      <ul class="nav-links">
+        <li><a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a></li>
+        <li><a href="about.html"><i class="fa fa-fw fa-info-circle"></i> About</a></li>
+        <li><a href="portfolio.html"><i class="fa fa-fw fa-briefcase"></i> Portfolio</a></li>
+        <li><a href="blog.html"><i class="fa fa-fw fa-pencil"></i> Blog</a></li>
+        <li><a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a></li>
+        <li><a href="login.html"><i class="fa fa-fw fa-user"></i> Login</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Forgot Password Section -->
+  <section class="forgot-password-section">
+    <div class="form-container">
+      <h2>Forgot Your Password?</h2>
+      <p>Enter your email below and we’ll send you a link to reset your password.</p>
+      <form action="forgot-password.php" method="POST" class="forgot-password-form">
+        <input type="email" name="email" placeholder="Enter your email" required />
+        <button type="submit"><i class="fa fa-paper-plane"></i> Send Reset Link</button>
+      </form>
+      
+      
+      <p><a href="login.html">Remember your password? Go back to login</a></p>
+    </div>
+  </section>
+
+  <!-- Footer (reuse as in other pages) -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>VISION KreationS</h3>
+        <p>Empowering businesses through Software Development, Networking, and Graphic Design.</p>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fa fa-envelope"></i> info@visionkreations.com</p>
+        <p><i class="fa fa-phone"></i> +254706516771</p>
+        <p><i class="fa fa-map-marker"></i> Online, Tech City</p>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <a href="#" class="social-icon"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="social-icon"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fa fa-linkedin"></i></a>
+        <a href="#" class="social-icon"><i class="fa fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 VISION KreationS. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
