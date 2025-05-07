@@ -1,31 +1,20 @@
-@import url('https://fonts.bunny.net/css?family=alata:400|ewert:400');
-
-/* Global Reset and Styles */
-* {
+@import url(https://fonts.bunny.net/css?family=alata:400|ewert:400);
+*{
   font-family: 'Alata', sans-serif;
   -webkit-font-smoothing: antialiased;
-  scroll-behavior: smooth;
-  user-select: none;
+  scroll-behavior:smooth;
+  user-select:none;
+}
+body {
+  background-color: rgb(125, 160, 211);
 }
 
-body, html {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--bg);
-  color: var(--text);
-  transition: background 0.3s, color 0.3s;
-}
-
-/* Navbar Styles */
 .navbar {
   height: 120px;
   width: 100%;
   background-color: #040a5c;
-  border-radius: 50px;
+/*   border-radius: 50px; */
   position: relative;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .logo img {
@@ -49,7 +38,7 @@ body, html {
   position: absolute;
   top: 120px;
   left: 0;
-  border-radius: 50px;
+/*   border-radius: 50px; */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 999;
 }
@@ -58,11 +47,11 @@ body, html {
   display: flex;
   flex-direction: row; /* Switch to horizontal layout */
   justify-content: center;
-  gap: 20px;
+  gap: 20px; /* Add spacing between links */
   padding: 10px;
 }
-
 li {
+  float: none;
   margin: 10px 0;
 }
 
@@ -81,26 +70,25 @@ li a:hover {
   background-color: #66c2c3;
 }
 
-/* Hero Section */
-.hero-section {
-  background: url('your-hero-image.jpg') no-repeat center center/cover;
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.cta-section {
+  background-color: #040a5c;
+  color: #ffffff;
   text-align: center;
-  color: #fff;
+  padding: 60px 20px;
+  margin-top: 40px;
 }
 
-.hero-text h1 {
-  font-size: 3rem;
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
 }
 
-.hero-text p {
-  font-size: 1.5rem;
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
 }
 
-.btn {
+.btn-cta {
   background-color: #ff6b00;
   color: #fff;
   padding: 12px 30px;
@@ -110,197 +98,10 @@ li a:hover {
   transition: background-color 0.3s ease;
 }
 
-.btn:hover {
+.btn-cta:hover {
   background-color: #e65a00;
 }
 
-/* Blog Section */
-.blog-section {
-  padding: 60px 20px;
-  background-color: #f4f4f4;
-  color: #333;
-}
-
-.blog-section h1 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-}
-
-.blog-section article {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  padding: 20px;
-  transition: transform 0.3s ease;
-}
-
-.blog-section article:hover {
-  transform: translateY(-5px);
-}
-
-.blog-section article h2 {
-  font-size: 1.8rem;
-  color: #040a5c;
-}
-
-.blog-section article p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-.blog-section article a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #ff6b00;
-  text-decoration: none;
-}
-
-/* Contact Section */
-.contact-section {
-  padding: 60px 20px;
-  background-color: #f4f4f4;
-  color: #333;
-}
-
-.contact-section h1 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.contact-form input, .contact-form textarea {
-  width: 100%;
-  max-width: 600px;
-  padding: 12px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-}
-
-.contact-form button {
-  padding: 12px 30px;
-  background-color: #ff6b00;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.contact-form button:hover {
-  background-color: #e65a00;
-}
-
-/* About Section */
-.about-section {
-  padding: 60px 20px;
-  background-color: #f4f4f4;
-  color: #333;
-}
-
-.about-section h1 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-}
-
-.about-section p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  margin-bottom: 30px;
-}
-
-.about-section ul {
-  list-style-type: none;
-  padding: 0;
-  text-align: center;
-}
-
-.about-section ul li {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.about-section ul li::before {
-  content: "✔️";
-  margin-right: 10px;
-  color: #ff6b00;
-}
-
-/* Login Section */
-/* Center the login form on the page */
-.login-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: calc(100vh - 150px); /* Adjust based on navbar/footer height */
-  padding: 2rem;
-  box-sizing: border-box;
-}
-
-.section-content {
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
-  text-align: center;
-}
-
-
-
-.login-form {
-  background-color: #fff;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  opacity: 0;
-  transform: translateY(-20px);
-}
-
-.login-form.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.login-form input {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-.login-form button {
-  padding: 12px 30px;
-  background-color: #ff6b00;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.login-form button:hover {
-  background-color: #e65a00;
-}
-
-/* Footer Styles */
 .site-footer {
   background-color: #040a5c;
   color: #fff;
@@ -373,11 +174,59 @@ li a:hover {
   transform: translateY(-3px);
 }
 
-/* Dark Mode */
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+
+.footer-newsletter {
+  margin-top: 30px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.newsletter-form input[type="email"] {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.newsletter-form button {
+  background-color: #f39c12;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.newsletter-form button:hover {
+  background-color: #e67e22;
+}
+
 :root {
   --bg: #ffff;
   --text: #111;
   --accent: #f39c12;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
 }
 
 .dark-mode {
@@ -385,7 +234,19 @@ li a:hover {
   --text: #f2f2f2;
 }
 
-/* Hamburger Menu */
+.dark-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--text);
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+}
+
+/* Hamburger menu */
 .menu-toggle {
   display: block;
   font-size: 24px;
@@ -399,152 +260,235 @@ li a:hover {
   z-index: 1000;
 }
 
-/* Active link styling */
+.links {
+  position: relative;
+}
 .links a.active {
   background-color: #66c2c3;
   color: white;
   border-radius: 50px;
 }
-
 .skill-badge {
   background-color: #4a5568;
   color: #ffffff;
   padding: 0.25rem 0.5rem;
   border-radius: 0.5rem;
   font-size: 0.75rem;
-  display: grid;
-  place-items: center;
+  display:grid;
+  place-item:center;
   font-family: 'Bungee Inline', display;
 }
-/* Add to existing styles.css */
-/* General Styling for the Login Section */
-.login-section {
-  background-color: var(--bg);
+.skill-badge {
+  @apply inline-block bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium;
+}
+
+/* Floating Bubbles Background */
+.bubble-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  background-color: rgba(253, 132, 2, 0.945);
+  border-radius: 50%;
+  opacity: 0;
+  animation: floatUp 20s linear infinite;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity:10;
+  }
+  100% {
+    transform: translateY(-120vh) scale(1.2);
+    opacity: 0;
+  }
+}
+.forgot-password-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 80vh;
+  padding: 40px 20px;
+  background-color: var(--bg);
+}
+
+.form-container {
+  background-color: #ffffff10;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.form-container h2 {
+  margin-bottom: 15px;
+  color: var(--text);
+}
+
+.form-container p {
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.forgot-password-form input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.forgot-password-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #f39c12;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.forgot-password-form button:hover {
+  background-color: #d35400;
+}
+
+.form-container a {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--accent);
+  text-decoration: underline;
+  font-size: 14px;
+}
+.signup-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background-color: var(--bg);
   padding: 20px;
 }
 
+.signup-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.signup-section .form-container {
+  background-color: #ffffff10;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.signup-section .form-container input,
+.signup-section .form-container textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.signup-section .form-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #f39c12;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.signup-section .form-container button:hover {
+  background-color: #d35400;
+}
+/* Center the login section */
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 150px); /* Adjust based on navbar/footer height */
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
 .section-content {
-  background-color: white;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
-  animation: fadeIn 1s ease-out; /* Add fade-in animation */
-}
-
-h1 {
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 2rem;
-  color: var(--text);
 }
-
-p {
-  text-align: center;
-  font-size: 1rem;
-  margin-bottom: 20px;
-  color: var(--text);
-}
-
-/* Form Styling */
-.login-form {
+.signup-section {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  box-sizing: border-box;
 }
 
-label {
-  font-weight: bold;
-  font-size: 1rem;
-  color: var(--text);
+.signup-wrapper {
+  width: 100%;
+  max-width: 600px;
 }
 
-input[type="email"], input[type="password"] {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-  transition: border 0.3s ease;
+.form-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
 }
 
-input[type="email"]:focus, input[type="password"]:focus {
-  border: 1px solid #f39c12; /* Highlight color */
-  outline: none;
+/* Optional: Ensure body takes full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 150px); /* Adjust based on navbar/footer height */
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
-/* Button Styling */
-.btn {
-  background-color: #f39c12;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #e67e22;
-}
-
-/* Footer Text */
-.footer-text {
+.about-section .section-content {
   text-align: center;
-  margin-top: 20px;
-}
-
-.footer-text a {
-  color: #f39c12;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.footer-text a:hover {
-  text-decoration: underline;
-}
-
-/* Back to Top Button */
-.back-to-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #f39c12;
-  color: white;
-  padding: 12px 14px;
-  border-radius: 50%;
-  font-size: 18px;
-  z-index: 1000;
-  display: none;
-  transition: background 0.3s, transform 0.3s;
-}
-
-.back-to-top:hover {
-  background-color: #d35400;
-  transform: translateY(-3px);
-}
-
-/* Animation for fade-in effect */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* For Dark Mode */
-.dark-mode {
-  --bg: #111;
-  --text: #f2f2f2;
+  max-width: 800px;
+  background-color: rgba(76, 11, 103, 0.956);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
