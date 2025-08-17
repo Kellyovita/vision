@@ -46,70 +46,70 @@ window.addEventListener("scroll", () => {
   }
 });
 // Floating bubbles background generator
-document.addEventListener("DOMContentLoaded", () => {
-  const container = document.createElement("div");
-  container.classList.add("bubble-container");
-  document.body.prepend(container);
+// document.addEventListener("DOMContentLoaded", () => {
+//   const container = document.createElement("div");
+//   container.classList.add("bubble-container");
+//   document.body.prepend(container);
 
-  for (let i = 0; i < 15; i++) {
-    const bubble = document.createElement("div");
-    bubble.classList.add("bubble");
-    const size = Math.random() * 40 + 10; // 10px - 50px
-    bubble.style.width = `${size}px`;
-    bubble.style.height = `${size}px`;
-    bubble.style.left = `${Math.random() * 100}%`;
-    bubble.style.animationDelay = `${Math.random() * 20}s`;
-    bubble.style.animationDuration = `${15 + Math.random() * 10}s`;
-    container.appendChild(bubble);
-  }
-});
+//   for (let i = 0; i < 15; i++) {
+//     const bubble = document.createElement("div");
+//     bubble.classList.add("bubble");
+//     const size = Math.random() * 40 + 10; // 10px - 50px
+//     bubble.style.width = `${size}px`;
+//     bubble.style.height = `${size}px`;
+//     bubble.style.left = `${Math.random() * 100}%`;
+//     bubble.style.animationDelay = `${Math.random() * 20}s`;
+//     bubble.style.animationDuration = `${15 + Math.random() * 10}s`;
+//     container.appendChild(bubble);
+//   }
+// });
 // Particle network background
-particlesJS("particles-js", {
-  stars: {
-    number: {
-      value: 60,
-      density: { enable: true, value_area: 800 }
-    },
-    color: { value: "#ffffff" },
-    shape: { type: "circle" },
-    opacity: {
-      value: 0.5,
-      random: false
-    },
-    size: {
-      value: 4,
-      random: true
-    },
-    line_linked: {
-      enable: true,
-      distance: 150,
-      color: "#ffffff",
-      opacity: 0.3,
-      width: 1
-    },
-    move: {
-      enable: true,
-      speed: 2,
-      direction: "none",
-      out_mode: "out"
-    }
-  },
-  interactivity: {
-    detect_on: "canvas",
-    events: {
-      onhover: { enable: true, mode: "grab" },
-      onclick: { enable: false },
-      resize: true
-    },
-    modes: {
-      grab: {
-        distance: 140,
-        line_linked: { opacity: 0.5 }
-      }
-    }
-  },
-  retina_detect: true
-});
+// particlesJS("particles-js", {
+//   stars: {
+//     number: {
+//       value: 60,
+//       density: { enable: true, value_area: 800 }
+//     },
+//     color: { value: "#ffffff" },
+//     shape: { type: "circle" },
+//     opacity: {
+//       value: 0.5,
+//       random: false
+//     },
+//     size: {
+//       value: 4,
+//       random: true
+//     },
+//     line_linked: {
+//       enable: true,
+//       distance: 150,
+//       color: "#ffffff",
+//       opacity: 0.3,
+//       width: 1
+//     },
+//     move: {
+//       enable: true,
+//       speed: 2,
+//       direction: "none",
+//       out_mode: "out"
+//     }
+//   },
+//   interactivity: {
+//     detect_on: "canvas",
+//     events: {
+//       onhover: { enable: true, mode: "grab" },
+//       onclick: { enable: false },
+//       resize: true
+//     },
+//     modes: {
+//       grab: {
+//         distance: 140,
+//         line_linked: { opacity: 0.5 }
+//       }
+//     }
+//   },
+//   retina_detect: true
+// });
 
 // Forgot Password functionality
 const forgotForm = document.querySelector(".forgot-password-form");
@@ -139,4 +139,5 @@ if (forgotForm) {
     });
   });
 }
+
 
